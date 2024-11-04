@@ -4,7 +4,7 @@ from .models import Tweet, Like
 # Register your models here.
 @admin.register(Tweet)
 class TweetAdmin(admin.ModelAdmin):
-    list_display = ("user", "short_payload", "created_at", "updated_at")
+    list_display = ("user", "short_payload", "like_count", "created_at", "updated_at")
     
     def short_payload(self, obj):
         return obj.payload[:10]
