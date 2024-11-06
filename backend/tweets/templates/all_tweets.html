@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+
+<ul>
+  {% for tweet in tweets %}
+  <li>
+    <a href="/{{tweet.pk}}">
+      <strong>{{tweet.payload}}</strong>
+    </a>
+    <br />
+    <strong>{{tweet.user}}</strong>
+    <br />
+    <strong>{{tweet.like_count}}</strong>
+    <br />
+    <br />
+  </li>
+  {% endfor %}
+</ul>
