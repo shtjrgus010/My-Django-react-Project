@@ -28,7 +28,7 @@ class Like(CommonModel):
     user = models.ForeignKey(
         "users.User",
         on_delete=models.CASCADE,
-        related_name='likes',
+        related_name="likes",
     )
     tweet = models.ForeignKey(
         "tweets.Tweet",
