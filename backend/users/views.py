@@ -64,7 +64,7 @@ class UserTweets(APIView):
 
 class LogOut(APIView):
     authentication_classes = [UsernameAuthentication]
-    
+
     def post(self, request):
         logout(request)
         return Response()
@@ -72,7 +72,7 @@ class LogOut(APIView):
 
 class LogIn(APIView):
     authentication_classes = [UsernameAuthentication]
-    
+
     def post(self, request):
         username = request.data.get("username")
         password = request.data.get("password")
@@ -91,8 +91,6 @@ class LogIn(APIView):
                 {"error": "Wrong password"},
                 status=HTTP_400_BAD_REQUEST,
             )
-
-
 
 
 class ChangePassword(APIView):
